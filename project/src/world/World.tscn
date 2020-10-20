@@ -21,3 +21,4 @@ scale = Vector2( 0.24, 0.24 )
 texture = ExtResource( 2 )
 
 [node name="Button" parent="." instance=ExtResource( 3 )]
+visible = false

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cross-shaped-target.png-1ef2ff606b3f3938c52eb849a62699c2.stex"
+path="res://.import/Coin_button@2x.png-782ef4735c40a767e8565ba354ad76bf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cross-shaped-target.png"
-dest_files=[ "res://.import/cross-shaped-target.png-1ef2ff606b3f3938c52eb849a62699c2.stex" ]
+source_file="res://assets/Coin_button@2x.png"
+dest_files=[ "res://.import/Coin_button@2x.png-782ef4735c40a767e8565ba354ad76bf.stex" ]
 
 [params]
 

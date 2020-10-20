@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/Canon.png" type="Texture" id=1]
 [ext_resource path="res://src/cannon/Cannon.gd" type="Script" id=2]
 [ext_resource path="res://src/cannon/rotation.gd" type="Script" id=3]
+[ext_resource path="res://assets/wheel.png" type="Texture" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 29.6321
@@ -11,11 +12,17 @@ height = 156.707
 [node name="Cannon" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
+[node name="wheel" type="Sprite" parent="."]
+position = Vector2( 65, 46 )
+scale = Vector2( 0.500715, 0.500715 )
+z_index = 2
+texture = ExtResource( 4 )
+
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0.946556, 36.1727 )
+position = Vector2( 35, 37 )
 scale = Vector2( 0.500715, 0.500715 )
 texture = ExtResource( 1 )
-offset = Vector2( 206.014, -6.92911 )
+offset = Vector2( 137.495, -9.06149 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

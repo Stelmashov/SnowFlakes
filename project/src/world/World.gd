@@ -2,7 +2,7 @@ extends Node2D
 
 onready var timer = $Game_teek
 var money = 0
-var increment = 100
+var increment = 5
 var current_money_upgrade_value = 20
 var max_money_upgrade = 5
 var current_upgrade = 1

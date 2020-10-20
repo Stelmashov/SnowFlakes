@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cross-shaped-target.png-1ef2ff606b3f3938c52eb849a62699c2.stex"
+path="res://.import/Protect_button@2x.png-a98ed9c3b433af93dcd44e066dec0ad2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cross-shaped-target.png"
-dest_files=[ "res://.import/cross-shaped-target.png-1ef2ff606b3f3938c52eb849a62699c2.stex" ]
+source_file="res://assets/Protect_button@2x.png"
+dest_files=[ "res://.import/Protect_button@2x.png-a98ed9c3b433af93dcd44e066dec0ad2.stex" ]
 
 [params]
 

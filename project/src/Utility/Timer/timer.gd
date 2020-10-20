@@ -11,8 +11,14 @@ func _process(delta):
 	if minutes > 59:
 		hours+= 1
 		minutes= 0
-	set_text(str(hours)+":"+str(minutes)+":"+str(seconds))
-
+	if seconds <= 9 and minutes <=9:
+		set_text(str(hours)+":0"+str(minutes)+":0"+str(seconds))
+	elif seconds <= 9 and minutes > 9:
+		set_text(str(hours)+":"+str(minutes)+":0"+str(seconds))
+	elif seconds > 9 and minutes <= 9:
+		set_text(str(hours)+":0"+str(minutes)+":"+str(seconds))
+	else:
+		set_text(str(hours)+":"+str(minutes)+":"+str(seconds))
 
 func _on_seconds_timeout():
 	seconds +=1

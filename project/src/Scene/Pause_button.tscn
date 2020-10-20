@@ -8,7 +8,6 @@
 [ext_resource path="res://Assets/white_hp@2x.png" type="Texture" id=6]
 
 [node name="Button" type="Node2D"]
-pause_mode = 2
 
 [node name="Pause_button" type="TextureButton" parent="."]
 pause_mode = 2
@@ -37,8 +36,8 @@ __meta__ = {
 }
 
 [node name="Coin_bar" type="Sprite" parent="."]
-position = Vector2( 1171, 75 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 1198, 75 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 
 [node name="background_HP_bar2x" type="Sprite" parent="."]
@@ -47,9 +46,11 @@ scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 5 )
 
 [node name="white_hp2x" type="Sprite" parent="background_HP_bar2x"]
-position = Vector2( -550, 0 )
+position = Vector2( -580, 0 )
+scale = Vector2( 0.9, 1 )
 texture = ExtResource( 6 )
 
 [node name="white_hp2x2" type="Sprite" parent="background_HP_bar2x"]
-position = Vector2( 540, 0 )
+position = Vector2( 570, 0 )
+scale = Vector2( 0.9, 1 )
 texture = ExtResource( 6 )

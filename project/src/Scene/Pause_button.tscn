@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Scripts/Pause_button.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Menu_bar.png" type="Texture" id=2]
+[ext_resource path="res://src/Scripts/Exit_button.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Coin_bar.png" type="Texture" id=4]
+[ext_resource path="res://Assets/background_HP_bar@2x.png" type="Texture" id=5]
+[ext_resource path="res://Assets/white_hp@2x.png" type="Texture" id=6]
+
+[node name="Button" type="Node2D"]
+pause_mode = 2
+
+[node name="Pause_button" type="TextureButton" parent="."]
+pause_mode = 2
+margin_top = 25.0
+margin_right = 210.0
+margin_bottom = 193.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 2 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit_button" type="TextureButton" parent="."]
+pause_mode = 2
+margin_top = 125.0
+margin_right = 210.0
+margin_bottom = 293.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 2 )
+expand = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coin_bar" type="Sprite" parent="."]
+position = Vector2( 1171, 75 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 4 )
+
+[node name="background_HP_bar2x" type="Sprite" parent="."]
+position = Vector2( 640, 70 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="white_hp2x" type="Sprite" parent="background_HP_bar2x"]
+position = Vector2( -550, 0 )
+texture = ExtResource( 6 )
+
+[node name="white_hp2x2" type="Sprite" parent="background_HP_bar2x"]
+position = Vector2( 540, 0 )
+texture = ExtResource( 6 )

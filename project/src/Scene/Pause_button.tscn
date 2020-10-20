@@ -1,9 +1,9 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/Scripts/Pause_button.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Menu_bar.png" type="Texture" id=2]
 [ext_resource path="res://src/Scripts/Exit_button.gd" type="Script" id=3]
-[ext_resource path="res://Assets/Coin_bar.png" type="Texture" id=4]
+[ext_resource path="res://Assets/upgrades_button@2x.png" type="Texture" id=4]
 [ext_resource path="res://assets/hp_bar@2x.png" type="Texture" id=5]
 [ext_resource path="res://src/Utility/Timer/TimerLabel.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Scene/money.gd" type="Script" id=7]
@@ -12,6 +12,7 @@
 [ext_resource path="res://assets/wheel.png" type="Texture" id=10]
 [ext_resource path="res://src/Scene/money_upgrade.gd" type="Script" id=11]
 [ext_resource path="res://assets/black_hp@2x.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Coin_bar@2x.png" type="Texture" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -48,7 +49,7 @@ margin_top = 125.0
 margin_right = 210.0
 margin_bottom = 293.0
 rect_scale = Vector2( 0.5, 0.5 )
-texture_normal = ExtResource( 2 )
+texture_normal = ExtResource( 4 )
 expand = true
 script = ExtResource( 3 )
 __meta__ = {
@@ -58,7 +59,7 @@ __meta__ = {
 [node name="Coin_bar" type="Sprite" parent="."]
 position = Vector2( 1198, 75 )
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 4 )
+texture = ExtResource( 13 )
 
 [node name="Label" type="Label" parent="Coin_bar"]
 margin_left = -206.0

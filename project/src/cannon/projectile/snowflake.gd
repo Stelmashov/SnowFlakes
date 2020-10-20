@@ -4,16 +4,18 @@ export var damage = 1# idk float/int
 # probably float
 var LIFETIME = 2# same + has to be const but changeable in inherited
 var direction: Vector2
+var speed = 0
 onready var cannon = get_tree().get_root().get_node("World/Cannon")
 
 
 func _ready():
 	$age.start(LIFETIME)
 	global_position += direction #* 6 #* 24
+	speed = cannon.speed
 
 
 func _process(delta) -> void:
-	global_position += direction * cannon.speed * delta
+	global_position += direction * speed * delta
 
 
 func die() -> void:

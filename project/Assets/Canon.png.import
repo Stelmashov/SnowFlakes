@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Canon.png-ee2e7a690752042b132656bf42aaf9e4.stex"
+path="res://.import/Canon.png-cd7108ebc2049486153f00408db261a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Canon.png"
-dest_files=[ "res://.import/Canon.png-ee2e7a690752042b132656bf42aaf9e4.stex" ]
+source_file="res://assets/Canon.png"
+dest_files=[ "res://.import/Canon.png-cd7108ebc2049486153f00408db261a0.stex" ]
 
 [params]
 

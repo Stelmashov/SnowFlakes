@@ -8,6 +8,8 @@ radius = 17.0643
 
 [node name="snowflake" type="RigidBody2D"]
 z_index = 5
+mass = 7.61
+gravity_scale = 9.24
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]

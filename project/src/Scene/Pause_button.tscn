@@ -1,9 +1,7 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Scripts/Pause_button.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Menu_bar.png" type="Texture" id=2]
-[ext_resource path="res://src/Scripts/Exit_button.gd" type="Script" id=3]
-[ext_resource path="res://Assets/upgrades_button@2x.png" type="Texture" id=4]
 [ext_resource path="res://assets/hp_bar@2x.png" type="Texture" id=5]
 [ext_resource path="res://src/Utility/Timer/TimerLabel.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Scene/money.gd" type="Script" id=7]
@@ -39,19 +37,6 @@ rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 2 )
 expand = true
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Exit_button" type="TextureButton" parent="."]
-pause_mode = 2
-margin_top = 125.0
-margin_right = 210.0
-margin_bottom = 293.0
-rect_scale = Vector2( 0.5, 0.5 )
-texture_normal = ExtResource( 4 )
-expand = true
-script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

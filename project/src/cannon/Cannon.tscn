@@ -13,9 +13,9 @@ height = 156.707
 script = ExtResource( 2 )
 
 [node name="wheel" type="Sprite" parent="."]
-position = Vector2( 65, 46 )
+position = Vector2( 49.8979, 52.6071 )
 scale = Vector2( 0.500715, 0.500715 )
-z_index = 2
+z_index = 1
 texture = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]

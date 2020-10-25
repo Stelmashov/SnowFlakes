@@ -1,6 +1,7 @@
 extends TextureButton
 
 var fl = 0
+onready var panel = get_node("/root/World/Button/Panel/exit_panel")
 
 func _input(event):
 
@@ -14,9 +15,6 @@ func _input(event):
 				fl = 0
 
 func _pressed():
-	if fl == 0:
 		get_tree().paused = true
-		fl = 1
-	else:
-		get_tree().paused = false
-		fl = 0
+		panel.show()
+

@@ -1,7 +1,6 @@
 extends Label
 
-
-onready var world = get_node("../../../")
+onready var world = get_node("/root/World")
 
 func _process(delta):
 	if world.current_upgrade < world.max_money_upgrade:

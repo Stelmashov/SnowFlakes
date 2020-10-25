@@ -1,7 +1,9 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://src/Scripts/Pause_button.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Menu_bar.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Exit_icon@2x.png" type="Texture" id=3]
+[ext_resource path="res://Assets/exit_panel@2x.png" type="Texture" id=4]
 [ext_resource path="res://assets/hp_bar@2x.png" type="Texture" id=5]
 [ext_resource path="res://src/Utility/Timer/TimerLabel.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Scene/money.gd" type="Script" id=7]
@@ -11,6 +13,11 @@
 [ext_resource path="res://src/Scene/money_upgrade.gd" type="Script" id=11]
 [ext_resource path="res://assets/black_hp@2x.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Coin_bar@2x.png" type="Texture" id=13]
+[ext_resource path="res://Assets/exit_button@2x.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Play_icon@2x.png" type="Texture" id=15]
+[ext_resource path="res://panel_theme.tres" type="Theme" id=16]
+[ext_resource path="res://src/Scripts/return_button.gd" type="Script" id=17]
+[ext_resource path="res://src/Scripts/Exit_button.gd" type="Script" id=18]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -23,12 +30,18 @@ font_data = ExtResource( 8 )
 [node name="Button" type="Node2D"]
 z_index = 6
 
-[node name="Label" parent="." instance=ExtResource( 6 )]
+[node name="Panel" type="Panel" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+theme = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="seconds" parent="Label" index="0"]
-autostart = true
+[node name="Label" parent="Panel" instance=ExtResource( 6 )]
+margin_bottom = 175.0
 
-[node name="Pause_button" type="TextureButton" parent="."]
+[node name="Pause_button" type="TextureButton" parent="Panel"]
 pause_mode = 2
 margin_top = 25.0
 margin_right = 210.0
@@ -41,12 +54,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Coin_bar" type="Sprite" parent="."]
+[node name="Coin_bar" type="Sprite" parent="Panel"]
 position = Vector2( 1198, 75 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 13 )
 
-[node name="Label" type="Label" parent="Coin_bar"]
+[node name="Label" type="Label" parent="Panel/Coin_bar"]
 margin_left = -206.0
 margin_top = -73.0
 margin_right = 106.0
@@ -59,14 +72,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="background_HP_bar2x" type="Sprite" parent="."]
+[node name="background_HP_bar2x" type="Sprite" parent="Panel"]
 position = Vector2( 640, 110 )
 scale = Vector2( 0.3, 0.3 )
 z_index = 2
 z_as_relative = false
 texture = ExtResource( 5 )
 
-[node name="TextureProgress" type="TextureProgress" parent="background_HP_bar2x"]
+[node name="TextureProgress" type="TextureProgress" parent="Panel/background_HP_bar2x"]
 margin_left = -1051.94
 margin_top = -220.238
 margin_right = 29.0627
@@ -79,7 +92,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureProgress2" type="TextureProgress" parent="background_HP_bar2x"]
+[node name="TextureProgress2" type="TextureProgress" parent="Panel/background_HP_bar2x"]
 margin_left = -10.5291
 margin_top = -220.238
 margin_right = 1070.47
@@ -93,17 +106,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="TextureButton" type="TextureButton" parent="Panel"]
 margin_left = 78.0
 margin_top = 532.0
-margin_right = 198.0
-margin_bottom = 652.0
+margin_right = 208.0
+margin_bottom = 663.0
 texture_normal = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="TextureButton"]
+[node name="Label" type="Label" parent="Panel/TextureButton"]
 margin_left = 4.24506
 margin_top = 7.91858
 margin_right = 127.245
@@ -116,4 +129,79 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[editable path="Label"]
+[node name="exit_panel" type="TextureRect" parent="Panel"]
+pause_mode = 2
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -218.0
+margin_top = -131.5
+margin_right = 218.0
+margin_bottom = 131.5
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="return_button" type="TextureButton" parent="Panel/exit_panel"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -173.5
+margin_top = -105.878
+margin_right = 173.5
+margin_bottom = -1.8782
+texture_normal = ExtResource( 14 )
+expand = true
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel/exit_panel/return_button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0197
+margin_top = -38.4994
+margin_right = 159.98
+margin_bottom = 148.501
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 15 )
+expand = true
+
+[node name="Exit_button" type="TextureButton" parent="Panel/exit_panel"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -173.5
+margin_top = 9.73538
+margin_right = 173.5
+margin_bottom = 113.735
+texture_normal = ExtResource( 14 )
+expand = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel/exit_panel/Exit_button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.2849
+margin_top = -38.4994
+margin_right = 166.715
+margin_bottom = 148.501
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 3 )
+expand = true

@@ -13,13 +13,10 @@ onready var crosshair = level.get_node("Crosshair")
 onready var INTERVAL = $INTERVAL
 
 func shoot():
-	#speed = DEFAULT_SPEED
 	var projectile_instance = projectile.instance()
 	level.call_deferred("add_child", projectile_instance)
 	projectile_instance.transform = global_transform
 	projectile_instance.direction = (crosshair.global_position - global_position).normalized()
-	
-	#projectile_instance.damage = self.damage
 
 
 func _physics_process(delta):
@@ -29,10 +26,9 @@ func _physics_process(delta):
 		hold_time += delta
 	elif Input.is_action_just_released("attack") and is_ready:
 		shoot()
-		
+		projectile = preload("res://src/cannon/projectile/snowflake.tscn")
 		is_ready = false
 		INTERVAL.start(2)
-		
 
 
 func _on_INTERVAL_timeout():

@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/present@2x.png" type="Texture" id=1]
+[ext_resource path="res://src/cannon/projectile/snowflake.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/cannon/projectile/gift.gd" type="Script" id=3]
+
+[node name="snowflake" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 37.0094, 33.2154 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )

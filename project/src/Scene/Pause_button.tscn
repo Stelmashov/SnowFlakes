@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://src/Scripts/Pause_button.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Menu_bar.png" type="Texture" id=2]
@@ -9,8 +9,7 @@
 [ext_resource path="res://src/Scene/money.gd" type="Script" id=7]
 [ext_resource path="res://assets/cabin-condensed-bold.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://assets/white_hp@2x.png" type="Texture" id=9]
-[ext_resource path="res://assets/wheel.png" type="Texture" id=10]
-[ext_resource path="res://src/Scene/money_upgrade.gd" type="Script" id=11]
+[ext_resource path="res://src/Scene/status_bar.gd" type="Script" id=10]
 [ext_resource path="res://assets/black_hp@2x.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Coin_bar@2x.png" type="Texture" id=13]
 [ext_resource path="res://Assets/exit_button@2x.png" type="Texture" id=14]
@@ -21,10 +20,6 @@
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
-font_data = ExtResource( 8 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 50
 font_data = ExtResource( 8 )
 
 [node name="Button" type="Node2D"]
@@ -102,32 +97,12 @@ texture_under = ExtResource( 12 )
 texture_progress = ExtResource( 9 )
 fill_mode = 1
 tint_progress = Color( 0.772549, 0.211765, 0.211765, 1 )
+script = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="Panel"]
-margin_left = 78.0
-margin_top = 532.0
-margin_right = 208.0
-margin_bottom = 663.0
-texture_normal = ExtResource( 10 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Panel/TextureButton"]
-margin_left = 4.24506
-margin_top = 7.91858
-margin_right = 127.245
-margin_bottom = 129.919
-custom_fonts/font = SubResource( 2 )
-align = 1
-valign = 1
-script = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Tween" type="Tween" parent="Panel/background_HP_bar2x/TextureProgress2"]
 
 [node name="exit_panel" type="TextureRect" parent="Panel"]
 pause_mode = 2

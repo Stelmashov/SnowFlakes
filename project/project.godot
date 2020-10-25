@@ -8,9 +8,32 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "BaseStats",
+"class": "BaseLvl1",
+"language": "GDScript",
+"path": "res://src/base/base_lvl_1/stats.gd"
+}, {
+"base": "Node",
+"class": "BaseStats",
+"language": "GDScript",
+"path": "res://src/base/stats.gd"
+}, {
+"base": "Label",
+"class": "InGameTimer",
+"language": "GDScript",
+"path": "res://src/Utility/Timer/TimerLabel.gd"
+}, {
+"base": "RigidBody2D",
+"class": "SnowFlake",
+"language": "GDScript",
+"path": "res://src/cannon/projectile/snowflake.gd"
+} ]
 _global_script_class_icons={
-
+"BaseLvl1": "",
+"BaseStats": "",
+"InGameTimer": "",
+"SnowFlake": ""
 }
 
 [application]
@@ -33,6 +56,16 @@ attack={
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
+
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_2="player_hurtbox"
+2d_physics/layer_3="player_projectile"
+2d_physics/layer_4="enemy"
+2d_physics/layer_5="enemy_hurtbox"
+2d_physics/layer_6="enemy_projectile"
+2d_physics/layer_7="tilemap"
 
 [rendering]
 

@@ -1,8 +1,9 @@
+class_name SnowFlake
 extends RigidBody2D
 
-export var damage = 1# idk float/int
+export var damage = 10# idk float/int
 # probably float
-var LIFETIME = 2# same + has to be const but changeable in inherited
+var LIFETIME = 3# same + has to be const but changeable in inherited
 var direction: Vector2
 var speed = 0
 onready var cannon = get_tree().get_root().get_node("World/Cannon")

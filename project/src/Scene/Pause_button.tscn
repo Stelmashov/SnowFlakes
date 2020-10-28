@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://src/Scripts/Pause_button.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Menu_bar.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/cabin-condensed-bold.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://assets/white_hp@2x.png" type="Texture" id=9]
 [ext_resource path="res://src/Scene/status_bar.gd" type="Script" id=10]
+[ext_resource path="res://Assets/upgrade_bar@2x.png" type="Texture" id=11]
 [ext_resource path="res://assets/black_hp@2x.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Coin_bar@2x.png" type="Texture" id=13]
 [ext_resource path="res://Assets/exit_button@2x.png" type="Texture" id=14]
@@ -17,6 +18,10 @@
 [ext_resource path="res://panel_theme.tres" type="Theme" id=16]
 [ext_resource path="res://src/Scripts/return_button.gd" type="Script" id=17]
 [ext_resource path="res://src/Scripts/Exit_button.gd" type="Script" id=18]
+[ext_resource path="res://Assets/upgrade_butt@2x.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Coin@2x.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Shield@2x.png" type="Texture" id=21]
+[ext_resource path="res://Assets/present@2x.png" type="Texture" id=22]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -180,3 +185,117 @@ margin_bottom = 148.501
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
 expand = true
+
+[node name="upgrade_bar" type="TextureRect" parent="Panel"]
+margin_left = 14.1122
+margin_top = 616.801
+margin_right = 361.112
+margin_bottom = 706.801
+texture = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coin" type="TextureButton" parent="Panel/upgrade_bar"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 8.0
+margin_top = -39.0
+margin_right = 86.0
+margin_bottom = 39.0
+texture_normal = ExtResource( 19 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel/upgrade_bar/coin"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -38.0
+margin_top = -31.0
+margin_right = 38.0
+margin_bottom = 31.0
+texture = ExtResource( 20 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coin2" type="TextureButton" parent="Panel/upgrade_bar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 3.0
+margin_top = -39.0
+margin_right = 81.0
+margin_bottom = 39.0
+texture_normal = ExtResource( 19 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/upgrade_bar/coin2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -41.1748
+margin_top = -31.3969
+margin_right = 34.8252
+margin_bottom = 30.6031
+texture = ExtResource( 22 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coin3" type="TextureButton" parent="Panel/upgrade_bar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -81.0
+margin_top = -39.0
+margin_right = -3.0
+margin_bottom = 39.0
+texture_normal = ExtResource( 19 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="Panel/upgrade_bar/coin3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -43.0
+margin_top = -30.8252
+margin_right = 33.0
+margin_bottom = 26.1748
+texture = ExtResource( 21 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coin4" type="TextureButton" parent="Panel/upgrade_bar"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -86.0
+margin_top = -39.0
+margin_right = -8.0
+margin_bottom = 39.0
+texture_normal = ExtResource( 19 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

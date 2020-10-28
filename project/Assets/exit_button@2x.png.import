@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/exit_button@2x.png-40dea463576ad33022fb71b62dd257e3.stex"
+path="res://.import/exit_button@2x.png-b0a20cd89466245b0fa36944c7d46d02.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/exit_button@2x.png"
-dest_files=[ "res://.import/exit_button@2x.png-40dea463576ad33022fb71b62dd257e3.stex" ]
+source_file="res://Assets/exit_button@2x.png"
+dest_files=[ "res://.import/exit_button@2x.png-b0a20cd89466245b0fa36944c7d46d02.stex" ]
 
 [params]
 

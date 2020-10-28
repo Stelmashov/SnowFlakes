@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/white_hp@2x.png-063202cbe22506f5ad6b7dd2c7dfdc29.stex"
+path="res://.import/upgrade_bar@2x.png-31b6a06cfc5f8469e2e9b142bd6773f5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/white_hp@2x.png"
-dest_files=[ "res://.import/white_hp@2x.png-063202cbe22506f5ad6b7dd2c7dfdc29.stex" ]
+source_file="res://Assets/upgrade_bar@2x.png"
+dest_files=[ "res://.import/upgrade_bar@2x.png-31b6a06cfc5f8469e2e9b142bd6773f5.stex" ]
 
 [params]
 

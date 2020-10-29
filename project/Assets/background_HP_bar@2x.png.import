@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/background_HP_bar@2x.png-b1d31edfd00a6f4c7a4fe6629eb93d38.stex"
+path="res://.import/background_HP_bar@2x.png-1a001fda66ba1590aa1d5fbec368ed15.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background_HP_bar@2x.png"
-dest_files=[ "res://.import/background_HP_bar@2x.png-b1d31edfd00a6f4c7a4fe6629eb93d38.stex" ]
+source_file="res://Assets/background_HP_bar@2x.png"
+dest_files=[ "res://.import/background_HP_bar@2x.png-1a001fda66ba1590aa1d5fbec368ed15.stex" ]
 
 [params]
 

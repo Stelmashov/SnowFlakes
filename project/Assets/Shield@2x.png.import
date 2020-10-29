@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Shield@2x.png-214a900cf533b6172d938cb4ecbc2a15.stex"
+path="res://.import/Shield@2x.png-126a6332d65b6271a4c1c62e26efb0e6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Shield@2x.png"
-dest_files=[ "res://.import/Shield@2x.png-214a900cf533b6172d938cb4ecbc2a15.stex" ]
+source_file="res://assets/Shield@2x.png"
+dest_files=[ "res://.import/Shield@2x.png-126a6332d65b6271a4c1c62e26efb0e6.stex" ]
 
 [params]
 

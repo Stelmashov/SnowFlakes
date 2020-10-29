@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/upgrades_button@2x.png-35f2b0b801a33c4dfb1fbddb646a35ea.stex"
+path="res://.import/upgrades_button@2x.png-1cdce74053d2a432965770a15b8c1072.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/upgrades_button@2x.png"
-dest_files=[ "res://.import/upgrades_button@2x.png-35f2b0b801a33c4dfb1fbddb646a35ea.stex" ]
+source_file="res://assets/upgrades_button@2x.png"
+dest_files=[ "res://.import/upgrades_button@2x.png-1cdce74053d2a432965770a15b8c1072.stex" ]
 
 [params]
 

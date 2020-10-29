@@ -1,0 +1,121 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/upgrade_butt@2x.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Coin@2x.png" type="Texture" id=2]
+[ext_resource path="res://Assets/upgrade_bar@2x.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Shield@2x.png" type="Texture" id=4]
+[ext_resource path="res://Assets/present@2x.png" type="Texture" id=5]
+
+[node name="upgrade_bar" type="TextureRect"]
+margin_left = 14.1122
+margin_top = 616.801
+margin_right = 361.112
+margin_bottom = 706.801
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coin_upgrade" type="TextureButton" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 8.0
+margin_top = -39.0
+margin_right = 86.0
+margin_bottom = 39.0
+texture_normal = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="coin_upgrade"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -38.0
+margin_top = -31.0
+margin_right = 38.0
+margin_bottom = 31.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="present_attack" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 3.0
+margin_top = -39.0
+margin_right = 81.0
+margin_bottom = 39.0
+texture_normal = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="present_attack"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -41.1748
+margin_top = -31.3969
+margin_right = 34.8252
+margin_bottom = 30.6031
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shield_upgrade" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -81.0
+margin_top = -39.0
+margin_right = -3.0
+margin_bottom = 39.0
+texture_normal = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="shield_upgrade"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -43.0
+margin_top = -30.8252
+margin_right = 33.0
+margin_bottom = 26.1748
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coin4" type="TextureButton" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -86.0
+margin_top = -39.0
+margin_right = -8.0
+margin_bottom = 39.0
+texture_normal = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

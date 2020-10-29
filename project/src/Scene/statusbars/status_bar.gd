@@ -1,6 +1,6 @@
 extends TextureProgress
 
-onready var stats = get_node("../../../../enemybase_lvl_1/stats")
+onready var stats = get_node("../../../enemybase_lvl_1/stats")
 onready var update_tween = $Tween
 
 var max_value_str = "max_health" #DEFAULT VALUE

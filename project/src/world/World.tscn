@@ -1,17 +1,26 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/Background2@2x.png" type="Texture" id=1]
 [ext_resource path="res://Assets/floor2@2x.png" type="Texture" id=2]
-[ext_resource path="res://src/Scene/upgrades_hud.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Scene/money/Coin_bar.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/base/base_lvl_1/base_lvl_1.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/Scene/Pause_button.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Scene/exit/exit_panel.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/cannon/Cannon.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/cannon/crosshair.gd" type="Script" id=7]
 [ext_resource path="res://Assets/cross-shaped-target.png" type="Texture" id=8]
+[ext_resource path="res://src/Scene/statusbars/background_HP_bar2x.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/world/World.gd" type="Script" id=10]
+[ext_resource path="res://src/Scene/pause/Pause_button.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/Scene/upggrade_bar/upgrade_bar.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/Utility/Timer/TimerLabel.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/world/Camera2D.gd" type="Script" id=14]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 10 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [  ]
+}
 
 [node name="enemybase_lvl_1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1152.53, 525.338 )
@@ -50,27 +59,9 @@ build_mode = 1
 polygon = PoolVector2Array( 123.833, 47.7917, 214.602, 46.4568, 286.684, -15.6132, 484.907, -15.6132, 620.392, 107.49, 928.348, 108.284, 988.154, 51.9842, 1250.61, 48.3472, 1326.29, -15.561, 1672.74, -17.2427, 1745.05, 36.5746, 1903.29, 39.4573, 1902.67, 162.081, -6.68665, 161.197, -8.98325, 46.4568 )
 
 [node name="Background" type="Sprite" parent="Canvas"]
-position = Vector2( 954.532, 341.307 )
+position = Vector2( 955, 341 )
 scale = Vector2( 0.24, 0.24 )
 texture = ExtResource( 1 )
-
-[node name="Button" parent="." instance=ExtResource( 5 )]
-position = Vector2( -0.902161, 226.643 )
-scale = Vector2( 0.7, 0.7 )
-z_index = 3
-
-[node name="seconds" parent="Button/Panel/Label" index="0"]
-autostart = true
-
-[node name="upgrades_hud" parent="Button" instance=ExtResource( 3 )]
-margin_left = -1.38137
-margin_top = 128.517
-margin_right = -1.38137
-margin_bottom = 128.517
-rect_scale = Vector2( 0.85, 0.9 )
-
-[node name="upgrade_panel" parent="Button/upgrades_hud/Panel" index="1"]
-visible = false
 
 [node name="Crosshair" type="Position2D" parent="."]
 position = Vector2( -0.902161, 226.643 )
@@ -88,19 +79,50 @@ wait_time = 2.0
 autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 448.618, 476.376 )
+position = Vector2( 448, 480 )
 scale = Vector2( 0.7, 0.7 )
+z_index = 5
 current = true
 zoom = Vector2( 0.7, 0.7 )
-[connection signal="pressed" from="Button/upgrades_hud/Panel/upgrade_panel/coin_upgrade" to="." method="_on_coin_upgrade_pressed"]
-[connection signal="pressed" from="Button/upgrades_hud/Panel/upgrade_panel/shield_upgrade" to="." method="_on_shield_upgrade_pressed"]
-[connection signal="pressed" from="Button/upgrades_hud/Panel/upgrade_panel/present_attack" to="." method="_on_present_attack_pressed"]
+script = ExtResource( 14 )
+
+[node name="Label" parent="Camera2D" instance=ExtResource( 13 )]
+margin_left = 8.39465
+margin_top = -233.796
+margin_right = 149.395
+margin_bottom = -182.796
+
+[node name="seconds" parent="Camera2D/Label" index="0"]
+autostart = true
+
+[node name="upgrade_bar" parent="Camera2D" instance=ExtResource( 12 )]
+margin_left = -605.714
+margin_top = 217.143
+margin_right = -258.715
+margin_bottom = 307.143
+
+[node name="background_HP_bar2x" parent="Camera2D" instance=ExtResource( 9 )]
+position = Vector2( 80, -238 )
+
+[node name="Pause_button" parent="Camera2D" instance=ExtResource( 11 )]
+margin_left = -640.0
+margin_top = -308.571
+margin_right = -430.0
+margin_bottom = -140.571
+
+[node name="Coin_bar" parent="Camera2D" instance=ExtResource( 3 )]
+position = Vector2( 558, -270 )
+
+[node name="exit_panel" parent="Camera2D" instance=ExtResource( 5 )]
 [connection signal="timeout" from="Game_teek" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="Camera2D/upgrade_bar/coin_upgrade" to="." method="_on_coin_upgrade_pressed"]
+[connection signal="pressed" from="Camera2D/upgrade_bar/present_attack" to="." method="_on_present_attack_pressed"]
+[connection signal="pressed" from="Camera2D/upgrade_bar/shield_upgrade" to="." method="_on_shield_upgrade_pressed"]
 
 [editable path="base_lvl_1"]
 
-[editable path="Button"]
+[editable path="Camera2D/Label"]
 
-[editable path="Button/Panel/Label"]
+[editable path="Camera2D/upgrade_bar"]
 
-[editable path="Button/upgrades_hud"]
+[editable path="Camera2D/background_HP_bar2x"]

@@ -5,15 +5,15 @@
 [ext_resource path="res://src/cannon/rotation.gd" type="Script" id=3]
 [ext_resource path="res://assets/wheel.png" type="Texture" id=4]
 
-[sub_resource type="Curve" id=2]
+[sub_resource type="Curve" id=1]
 min_value = -200.0
 max_value = 200.0
 _data = [ Vector2( 0.00632912, 65.2215 ), 0.0, 2245.95, 0, 0, Vector2( 0.196203, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=3]
-curve = SubResource( 2 )
+[sub_resource type="CurveTexture" id=2]
+curve = SubResource( 1 )
 
-[sub_resource type="ParticlesMaterial" id=4]
+[sub_resource type="ParticlesMaterial" id=3]
 emission_shape = 1
 emission_sphere_radius = 1.0
 flag_disable_z = true
@@ -22,12 +22,12 @@ initial_velocity = 356.02
 initial_velocity_random = 1.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
-linear_accel_curve = SubResource( 3 )
+linear_accel_curve = SubResource( 2 )
 scale = 15.0
 scale_random = 1.0
 color = Color( 0.933333, 0.933333, 0.933333, 1 )
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=4]
 radius = 29.6321
 height = 156.707
 
@@ -35,14 +35,13 @@ height = 156.707
 script = ExtResource( 2 )
 
 [node name="wheel" type="Sprite" parent="."]
-position = Vector2( 49.8979, 52.6071 )
+position = Vector2( 15.3719, 13.1205 )
 scale = Vector2( 0.500715, 0.500715 )
 z_index = 1
 texture = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 35, 37 )
-scale = Vector2( 0.500715, 0.500715 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 offset = Vector2( 137.495, -9.06149 )
 script = ExtResource( 3 )
@@ -52,16 +51,16 @@ position = Vector2( 343.758, 6.50986 )
 scale = Vector2( 1.99714, 1.99714 )
 emitting = false
 amount = 40
-lifetime = 3.0
+lifetime = 2.0
 one_shot = true
 speed_scale = 2.0
 explosiveness = 0.94
-process_material = SubResource( 4 )
+process_material = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 107.623, 38.0546 )
+position = Vector2( 72.4252, 0 )
 rotation = 1.5708
-shape = SubResource( 1 )
+shape = SubResource( 4 )
 disabled = true
 
 [node name="INTERVAL" type="Timer" parent="."]

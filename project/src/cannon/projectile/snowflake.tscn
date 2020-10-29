@@ -18,11 +18,13 @@ script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 39.0696, 33.2154 )
-scale = Vector2( 0.492895, 0.492895 )
+scale = Vector2( 0.332895, 0.332895 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 39.1017, 33.2154 )
+scale = Vector2( 0.68, 0.68 )
 shape = SubResource( 1 )
 
 [node name="age" type="Timer" parent="."]

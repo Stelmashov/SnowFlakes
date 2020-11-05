@@ -1,3 +1,4 @@
+class_name cannon
 extends KinematicBody2D
 
 const DEFAULT_SPEED = 200
@@ -18,7 +19,6 @@ func shoot():
 	level.call_deferred("add_child", projectile_instance)
 	projectile_instance.transform = global_transform
 	projectile_instance.direction = (crosshair.global_position - global_position).normalized()
-
 
 
 func _physics_process(delta):

@@ -7,7 +7,7 @@ var LIFETIME = 3# same + has to be const but changeable in inherited
 var direction: Vector2
 var speed = 0
 onready var cannon = get_tree().get_root().get_node("World/Cannon")
-
+onready var level = get_tree().get_root().get_node("World")
 
 func _ready():
 	$age.start(LIFETIME)
@@ -24,6 +24,7 @@ func die() -> void:
 
 
 func _on_age_timeout():
+	level.turn += 1
 	die()
 
 

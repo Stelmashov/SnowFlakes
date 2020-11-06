@@ -1,6 +1,7 @@
+class_name CoinLabel
 extends Label
 
-onready var world = get_node("/root/World")
+onready var base = get_node("/root/World/base_lvl_1")
 
 func _process(delta):
-	set_text(str(world.money))
+	set_text(str(base.money))

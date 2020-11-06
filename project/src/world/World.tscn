@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Assets/Background2@2x.png" type="Texture" id=1]
 [ext_resource path="res://Assets/floor2@2x.png" type="Texture" id=2]
@@ -14,8 +14,7 @@
 [ext_resource path="res://src/Scene/upggrade_bar/upgrade_bar.tscn" type="PackedScene" id=12]
 [ext_resource path="res://src/Utility/Timer/TimerLabel.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/base/enemy_base/enemy_base.gd" type="Script" id=14]
-[ext_resource path="res://src/cannon/enemy_rotation.gd" type="Script" id=15]
-[ext_resource path="res://src/cannon/enemy_Cannon.gd" type="Script" id=16]
+[ext_resource path="res://src/world/enemy_coin_Label.gd" type="Script" id=15]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 10 )
@@ -42,15 +41,6 @@ collision_mask = 40
 position = Vector2( 49.3218, 471.006 )
 scale = Vector2( 0.42, 0.42 )
 z_index = 2
-
-[node name="Cannon2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1420.27, 389.773 )
-scale = Vector2( 0.42, 0.42 )
-z_index = 2
-script = ExtResource( 16 )
-
-[node name="Sprite" parent="Cannon2" index="1"]
-script = ExtResource( 15 )
 
 [node name="Canvas" type="Node" parent="."]
 
@@ -86,10 +76,6 @@ position = Vector2( 1, 1 )
 scale = Vector2( 0.05, 0.05 )
 texture = ExtResource( 8 )
 
-[node name="Game_teek" type="Timer" parent="."]
-wait_time = 2.0
-autostart = true
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 448, 480 )
 scale = Vector2( 0.7, 0.7 )
@@ -115,6 +101,8 @@ margin_bottom = 307.143
 [node name="background_HP_bar2x" parent="Camera2D" instance=ExtResource( 9 )]
 position = Vector2( 80, -238 )
 
+[node name="Tween" type="Tween" parent="Camera2D/background_HP_bar2x/TextureProgress" index="0"]
+
 [node name="Pause_button" parent="Camera2D" instance=ExtResource( 11 )]
 margin_left = -640.0
 margin_top = -308.571
@@ -138,6 +126,9 @@ margin_top = -233.796
 margin_right = 149.395
 margin_bottom = -182.796
 
+[node name="seconds" parent="Camera2D2/Label" index="0"]
+autostart = true
+
 [node name="upgrade_bar" parent="Camera2D2" instance=ExtResource( 12 )]
 margin_left = 245.715
 margin_top = 217.143
@@ -156,8 +147,11 @@ margin_bottom = -140.571
 [node name="Coin_bar" parent="Camera2D2" instance=ExtResource( 3 )]
 position = Vector2( 558, -268.99 )
 
+[node name="Label" parent="Camera2D2/Coin_bar" index="0"]
+script = ExtResource( 15 )
+
 [node name="exit_panel" parent="Camera2D2" instance=ExtResource( 5 )]
-[connection signal="timeout" from="Game_teek" to="." method="_on_Timer_timeout"]
+[connection signal="next_turn" from="." to="." method="_on_World_next_turn"]
 [connection signal="pressed" from="Camera2D/upgrade_bar/coin_upgrade" to="." method="_on_coin_upgrade_pressed"]
 [connection signal="pressed" from="Camera2D/upgrade_bar/present_attack" to="." method="_on_present_attack_pressed"]
 [connection signal="pressed" from="Camera2D/upgrade_bar/shield_upgrade" to="." method="_on_shield_upgrade_pressed"]
@@ -169,12 +163,16 @@ position = Vector2( 558, -268.99 )
 
 [editable path="Cannon"]
 
-[editable path="Cannon2"]
-
 [editable path="Camera2D/Label"]
 
 [editable path="Camera2D/upgrade_bar"]
 
 [editable path="Camera2D/background_HP_bar2x"]
 
+[editable path="Camera2D/Coin_bar"]
+
+[editable path="Camera2D2/Label"]
+
 [editable path="Camera2D2/upgrade_bar"]
+
+[editable path="Camera2D2/Coin_bar"]

@@ -5,11 +5,11 @@ const DEFAULT_SPEED = 200
 const SPEED_INCREASE_PER_FRAME = 50
 
 var projectile = preload("res://src/cannon/projectile/snowflake.tscn")
-onready var shoot_part = get_node("Sprite/shoot")
 var is_ready = true
 var hold_time = 0.0
 var speed = DEFAULT_SPEED
 
+onready var shoot_part = get_node("Sprite/shoot")
 onready var level = get_tree().get_root().get_node("World")#mb can switch to owner
 onready var crosshair = level.get_node("Crosshair")
 onready var INTERVAL = $INTERVAL
@@ -32,7 +32,6 @@ func _physics_process(delta):
 		is_ready = false
 		shoot_part.emitting = true
 		INTERVAL.start(2)
-
 
 func _on_INTERVAL_timeout():
 	is_ready = true

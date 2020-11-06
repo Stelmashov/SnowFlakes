@@ -1,3 +1,4 @@
+class_name StatusBar
 extends TextureProgress
 
 onready var stats = get_node("../../../enemybase_lvl_1/stats")

@@ -20,11 +20,11 @@ func _process(delta) -> void:
 
 
 func die() -> void:
+	level.emit_signal("next_turn")
 	queue_free()
 
 
 func _on_age_timeout():
-	level.turn += 1
 	die()
 
 

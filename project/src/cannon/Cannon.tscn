@@ -48,7 +48,7 @@ offset = Vector2( 137.495, -9.06149 )
 script = ExtResource( 3 )
 
 [node name="shoot" type="Particles2D" parent="Sprite"]
-position = Vector2( 343.758, 6.50986 )
+position = Vector2( 343.758, 3.51325 )
 scale = Vector2( 1.99714, 1.99714 )
 emitting = false
 amount = 40

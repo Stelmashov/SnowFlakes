@@ -2,6 +2,7 @@ class_name cannon_rotation
 extends Sprite
 
 var new_rotation
+
 var start = -90
 var end = 30
 var count = 1
@@ -16,3 +17,4 @@ func _process(delta):
 			if new_rotation >= deg2rad(start) and new_rotation <= deg2rad(end):
 				rotation = new_rotation
 		
+
